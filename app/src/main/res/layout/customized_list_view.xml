@@ -8,7 +8,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:text="Białko : "
+            android:text="@string/bwt_bialko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
@@ -19,7 +19,7 @@
              />
 
         <TextView
-            android:text="Węglowodany :"
+            android:text="@string/bwt_weglowodany"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
@@ -27,7 +27,7 @@
             android:layout_alignStart="@+id/textView" />
 
         <TextView
-            android:text="Tłuszcz :"
+            android:text="@string/bwt_tluszcz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
@@ -35,7 +35,7 @@
             android:id="@+id/textView3" />
 
         <TextView
-            android:text="Kalorie :"
+            android:text="@string/kalorie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="27dp"
@@ -44,7 +44,7 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
-            android:text="160"
+            android:text="@string/kalorie_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView5"
@@ -54,7 +54,7 @@
             android:layout_alignEnd="@+id/textView4" />
 
         <TextView
-            android:text="12 g"
+            android:text="@string/bwt_bialko_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView2"
@@ -63,7 +63,7 @@
             android:id="@+id/textView6" />
 
         <TextView
-            android:text="10 g"
+            android:text="@string/bwt_weglowodany_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/textView5"
@@ -71,7 +71,7 @@
             android:id="@+id/textView7" />
 
         <TextView
-            android:text="8 g"
+            android:text="@string/bwt_tluszcz_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView7"
