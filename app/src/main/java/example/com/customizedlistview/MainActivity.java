@@ -7,9 +7,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
+    ArrayList<Product> products = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +20,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         listView = (ListView) findViewById(R.id.listView);
 
         for (int i=0; i<10; i++) {
-            new Product(i+3, i+1, 1);
+            products.add(new Product(i+3, i+1, 1));
         }
 
-        CustomizedListView adapter = new CustomizedListView(MainActivity.this);
+        CustomizedListView adapter = new CustomizedListView(MainActivity.this, products);
 
         listView.setAdapter(adapter);
     }

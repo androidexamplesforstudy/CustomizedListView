@@ -17,11 +17,13 @@ public class CustomizedListView extends BaseAdapter {
 
     Context context;
     LayoutInflater layoutInflater;
-    private ArrayList<Product> products = Product.getProducts();
+    ArrayList<Product> products;
 
-    public CustomizedListView(Context context) {
+
+    public CustomizedListView(Context context, ArrayList<Product> products) {
         this.context = context;
         this.layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        this.products = new ArrayList<>(products);
     }
 
     @Override
@@ -41,6 +43,7 @@ public class CustomizedListView extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
+
         view = layoutInflater.inflate(R.layout.customized_list_view, null);
 
         TextView protein = (TextView) view.findViewById(R.id.textView6);
@@ -48,10 +51,10 @@ public class CustomizedListView extends BaseAdapter {
         TextView fat = (TextView) view.findViewById(R.id.textView8);
         TextView calories = (TextView) view.findViewById(R.id.textView5);
 
-        protein.setText(products.get(position).getProtein());
-        carbo.setText(products.get(position).getCarbo());
-        fat.setText(products.get(position).getFat());
-        calories.setText(products.get(position).getCalories());
+        protein.setText(String.valueOf(products.get(position).getProtein()));
+        carbo.setText(String.valueOf(products.get(position).getCarbo()));
+        fat.setText(String.valueOf(products.get(position).getFat()));
+        calories.setText(String.valueOf(products.get(position).getCalories()));
 
         return view;
     }
