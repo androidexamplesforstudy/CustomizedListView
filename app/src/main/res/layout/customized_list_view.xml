@@ -19,20 +19,12 @@
              />
 
         <TextView
-            android:text="@string/bwt_weglowodany"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_below="@+id/textView"
-            android:layout_alignStart="@+id/textView" />
-
-        <TextView
             android:text="@string/bwt_tluszcz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
-            android:id="@+id/textView3" />
+            android:id="@+id/textView3"
+            android:layout_alignStart="@+id/textView2" />
 
         <TextView
             android:text="@string/kalorie"
@@ -77,5 +69,13 @@
             android:layout_below="@+id/textView7"
             android:layout_alignStart="@+id/textView7"
             android:id="@+id/textView8" />
+
+        <TextView
+            android:text="@string/bwt_weglowodany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView" />
     </RelativeLayout>
 </LinearLayout>

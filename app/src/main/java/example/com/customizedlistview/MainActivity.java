@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        listView = (ListView) findViewById(R.id.listView);
+
+        for (int i=0; i<10; i++) {
+            new Product(i+3, i+1, 1);
+        }
+
+        CustomizedListView adapter = new CustomizedListView(MainActivity.this);
+
+        listView.setAdapter(adapter);
     }
 
     @Override
