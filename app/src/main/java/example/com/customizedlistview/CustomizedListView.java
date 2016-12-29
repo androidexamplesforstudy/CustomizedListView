@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -46,15 +47,25 @@ public class CustomizedListView extends BaseAdapter {
 
         view = layoutInflater.inflate(R.layout.customized_list_view, null);
 
-        TextView protein = (TextView) view.findViewById(R.id.textView6);
-        TextView carbo = (TextView) view.findViewById(R.id.textView7);
-        TextView fat = (TextView) view.findViewById(R.id.textView8);
-        TextView calories = (TextView) view.findViewById(R.id.textView5);
+        final TextView protein = (TextView) view.findViewById(R.id.textView6);
+        final TextView carbo = (TextView) view.findViewById(R.id.textView7);
+        final TextView fat = (TextView) view.findViewById(R.id.textView8);
+        final TextView calories = (TextView) view.findViewById(R.id.textView5);
 
         protein.setText(String.valueOf(products.get(position).getProtein()));
         carbo.setText(String.valueOf(products.get(position).getCarbo()));
         fat.setText(String.valueOf(products.get(position).getFat()));
         calories.setText(String.valueOf(products.get(position).getCalories()));
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, protein.getText() + "\n" +
+                        carbo.getText() + "\n" +
+                        fat.getText() + "\n" +
+                        calories.getText() + "\n", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return view;
     }
